@@ -262,7 +262,7 @@ export default function Home() {
         <section className="py-16 px-4 bg-[#F5E7C4]">
           <div className="container mx-auto text-center">
             <a
-              href="#"
+              onClick={openLightbox}
               className="inline-block text-xl font-semibold text-[#661d00] hover:text-black transition"
             >
               <div className="p-2 md:p-4 border-4 border-white bg-white">
@@ -356,8 +356,7 @@ export default function Home() {
 
     {/* 2. Disclaimer is in a separate paragraph for proper styling */}
     <p className="text-white text-xs leading-relaxed max-w-5xl mx-auto">
-      Disclaimer: This is not an offer, an invitation to offer, and/or commitment of any nature. This contains artistic impressions and stock images for illustrative purpose and no warranty is expressly or impliedly given that the completed development will comply in any degree with such artist impression as depicted. All specifications shall be as per the final agreement between the parties. Recipients are advised to use their discretion in relying on the information / amenities described/shown therein. Premium specifications are subject to agreed/additional cost. T&C apply. E & OE.
-    </p>
+     All illustrations, videos, and images are the property of Concorde Group and are used for representational purposes only. This project is marketed by Property Pulse Realty, the official channel partner.</p>
 
   </div>
 </footer>
