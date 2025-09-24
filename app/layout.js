@@ -1,6 +1,7 @@
 // app/layout.js
 
 // CSS Imports
+import Script from 'next/script'; // 1. IMPORT THE SCRIPT COMPONENT
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -50,7 +51,24 @@ export default function RootLayout({ children }) {
           {children} {/* This is where your page content will render */}
           <StickyEnquireButton />
         </LightboxProvider>
-        
+
+        <Script 
+          strategy="afterInteractive" 
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+        />
+        <Script 
+          id="google-analytics" 
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `}
+        </Script> 
+         
+         
       </body>
     </html>
   );

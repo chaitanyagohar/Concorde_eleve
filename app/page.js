@@ -61,7 +61,7 @@ export default function Home() {
 <section 
   id="about" 
   // Base classes are for mobile (dark bg), 'md:' classes are for desktop (white bg)
-  className="py-16 px-6 md:px-16 lg:px-24 bg-[#661d00] md:bg-white transition-colors duration-500"
+  className="py-16 px-6 md:px-16 lg:px-24 bg-[#572f1f] md:bg-white transition-colors duration-500"
 >
   <div className="container mx-auto">
     {/* This container uses Flexbox to control the layout and order */}
@@ -109,7 +109,7 @@ export default function Home() {
         {/* Section 2: A Home in the Sky (Unit Types) */}
         <section id="configuration" className="py-16 px-4 sm:px-8 bg-[#F5E7C4]">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-playfair font-bold text-[#661d00] mb-12 tracking-widest">
+            <h2 className="text-3xl md:text-5xl font-playfair font-bold text-[#572f1f] mb-12 tracking-widest">
               A HOME IN THE SKY
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-4">
@@ -220,7 +220,7 @@ export default function Home() {
               elevate everyday living with comfort, convenience, and enriching
               experiences.
             </p>
-            <button  onClick={ openLightbox } className="bg-[#FFFFFF] text-[#661d00] rounded-lg font-bold py-3 px-8 hover:bg-gray-200 transition-colors">
+            <button  onClick={ openLightbox } className="bg-[#FFFFFF] text-[#572f1f] rounded-lg font-bold py-3 px-8 hover:bg-gray-200 transition-colors">
               Download Brochure
             </button>
           </div>
@@ -263,7 +263,7 @@ export default function Home() {
           <div className="container mx-auto text-center">
             <a
               onClick={openLightbox}
-              className="inline-block text-xl font-semibold text-[#661d00] hover:text-black transition"
+              className="inline-block text-xl font-semibold text-[#572f1f] hover:text-black transition"
             >
               <div className="p-2 md:p-4 border-4 border-white bg-white">
                 <Image
@@ -306,7 +306,7 @@ export default function Home() {
         {/* Section 10: Video Gallery */}
         <section className="py-16 px-4 md:px-10 lg:px-20 bg-white">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-playfair text-[#661d00] mb-12">
+            <h2 className="text-3xl md:text-5xl font-playfair text-[#572f1f] mb-12">
               Video Gallery
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

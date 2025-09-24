@@ -50,7 +50,7 @@ export default function BrochureLightbox({ isOpen, onClose }) {
 
   return (
     <div onClick={onClose} className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div onClick={handlePanelClick} className="relative w-full max-w-md bg-[#5C0527] p-8 md:p-10 rounded-2xl shadow-lg">
+      <div onClick={handlePanelClick} className="relative w-full max-w-md bg-[#572f1f] p-8 md:p-10 rounded-2xl shadow-lg">
         <button onClick={onClose} className="absolute top-4 right-4 text-white/70 transition-colors hover:text-white">
           <CloseIcon />
         </button>
