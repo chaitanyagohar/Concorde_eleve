@@ -16,9 +16,8 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    // IMPORTANT: This is a strict policy. You may need to adjust it if you load
-    // resources from other domains (e.g., Google Fonts, analytics scripts).
-    value: "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data:; object-src 'none';",
+    // THIS IS THE UPDATED LINE
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data:; frame-src 'self' https://www.youtube.com; object-src 'none';",
   },
 ];
 
@@ -41,7 +40,7 @@ const nextConfig = {
     ],
   },
   
-  // The new function to add security headers
+  // The function to add security headers
   async headers() {
     return [
       {
