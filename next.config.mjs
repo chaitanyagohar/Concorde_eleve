@@ -16,8 +16,8 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    // THIS IS THE UPDATED LINE
-    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data:; frame-src 'self' https://www.youtube.com; object-src 'none';",
+    // THIS IS THE FINAL UPDATED LINE
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data:; frame-src 'self' https://www.youtube.com https://www.google.com; object-src 'none';",
   },
 ];
 
