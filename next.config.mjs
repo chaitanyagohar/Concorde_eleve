@@ -16,9 +16,8 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    // THIS IS THE FINAL UPDATE
-// Replace the old value with this corrected one
-value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data: https://www.google.com https://www.google.co.in; frame-src 'self' https://www.youtube.com https://www.google.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://googleads.g.doubleclick.net; object-src 'none';",
+// THIS IS THE FINAL UPDATE
+value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://googleads.g.doubleclick.net; style-src 'self' 'unsafe-inline'; img-src 'self' https://images.unsplash.com https://via.placeholder.com data: https://www.google.com https://www.google.co.in; frame-src 'self' https://www.youtube.com https://www.google.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://www.google.com https://analytics.google.com https://googleads.g.doubleclick.net; object-src 'none';",
   },
 ];
 
