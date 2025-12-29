@@ -1,26 +1,22 @@
 "use client";
 
 import { useEffect } from 'react'; // 1. Import useEffect
-import StickyEnquireButton from "@/components/StickyEnquireButton";
 import Image from "next/image";
 import Header from "@/components/Header";
-import AmenitiesSlider from "@/components/AmenitiesSlider";
-import LandscapeAmenities from "@/components/LandscapeAmenities";
-import RenderGallery from "@/components/RendorGallery";
-import LocationMap from "@/components/LocationMap";
-import LocationAccordion from "@/components/LocationAccordion";
+import dynamic from "next/dynamic";
+
+const AmenitiesSlider = dynamic(() => import("@/components/AmenitiesSlider"), { ssr: false });
+const LandscapeAmenities = dynamic(() => import("@/components/LandscapeAmenities"), { ssr: false });
+const RenderGallery = dynamic(() => import("@/components/RendorGallery"), { ssr: false });
+const LocationMap = dynamic(() => import("@/components/LocationMap"), { ssr: false });
+const LocationAccordion = dynamic(() => import("@/components/LocationAccordion"), { ssr: false });
+const StickyEnquireButton = dynamic(() => import("@/components/StickyEnquireButton"), { ssr: false });
+
 import { useLightbox } from '@/app/context/LightboxContext';
 export default function Home() {
   const { openLightbox } = useLightbox(); // 3. Get the open function from the context
 
-  // 4. This effect runs the 4-second timer on page load
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      openLightbox();
-    }, 4000); // 4 seconds
-
-    return () => clearTimeout(timer);
-  }, []); // The empty array ensures this runs only once
+ 
   return (
     <div className="bg-white text-gray-800">
       <Header />

@@ -16,14 +16,25 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+useEffect(() => {
+  let ticking = false;
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const handleScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        const scrolled = window.scrollY > 10;
+        setIsScrolled(prev => (prev !== scrolled ? scrolled : prev));
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
   
   // Effect to prevent body scroll when menu is open
   useEffect(() => {
@@ -42,13 +53,13 @@ export default function Header() {
         <div className="container mx-auto flex justify-between items-center text-white">
           <a href="#home" aria-label="Go to homepage">
             <Image
-              src="/concorde-logo.svg"
-              alt="Concorde Eleve Logo"
-              width={130}
-              height={20}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority
-            />
+  src="/concorde-logo.svg"
+  alt="Concorde Eleve Logo"
+  width={130}
+  height={20}
+  priority
+/>
+
           </a>
 
           {/* Desktop Navigation */}
